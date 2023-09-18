@@ -1,0 +1,29 @@
+{
+  "name": "yes",
+  "version": "1.0.0",
+  "description": "Ola aqui eu disponibilizei os meus exercícios do meu curso jovem programador no Senac.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "teste": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest test/index.test.js",
+    "test:cov": "jest test/index.test.js --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arthurdante/exercise-javascript.git"
+  },
+  "author": "arthur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arthurdante/exercise-javascript/issues"
+  },
+  "homepage": "https://github.com/Arthurdante/exercise-javascript#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.1"
+  }
+}
