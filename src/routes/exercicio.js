@@ -9,4 +9,8 @@ router.post('/api/exercicio3', controller.Media5)
 router.post('/api/exercicio4', controller.Celsiofahrenheit)
 router.post('/api/exercicio5', controller.Quilometrosmilha)
 router.post('/api/exercicio6', controller.Segundorelogio)
+router.post('/api/exercicio7', controller.Quilometrosmetros)
+router.post('/api/exercicio8', controller.Tabuada1a10)
+router.post('/api/exercicio9', controller.Aprovado)
+router.post('/api/exercicio10', controller.Imc)
 module.exports = router

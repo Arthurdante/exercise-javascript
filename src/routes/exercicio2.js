@@ -1,0 +1,16 @@
+const express = require('express')
+const ControllerExercicio2 = require('../controllers/exercicio2.js')
+
+const controller = new ControllerExercicio2()
+const router = express.Router()
+router.post('/api/exercicio11', controller.Operacao)
+// router.post('/api/exercicio12', controller.Multiplicar)
+// router.post('/api/exercicio13', controller.Media5)
+// router.post('/api/exercicio14', controller.Celsiofahrenheit)
+// router.post('/api/exercicio15', controller.Quilometrosmilha)
+// router.post('/api/exercicio16', controller.Segundorelogio)
+// router.post('/api/exercicio17', controller.Quilometrosmetros)
+// router.post('/api/exercicio18', controller.Tabuada1a10)
+// router.post('/api/exercicio19', controller.Aprovado)
+// router.post('/api/exercicio20', controller.Imc)
+module.exports = router

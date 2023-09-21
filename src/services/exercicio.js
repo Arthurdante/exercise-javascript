@@ -40,7 +40,7 @@ class ServicoExercicio {
         return resultado;
     }
     Segundorelogio(tempo_em_segundos) {
-        if(isNaN(tempo_em_segundos) || Number.isInteger(tempo_em_segundos)){
+        if(isNaN(tempo_em_segundos)){
             throw new Error("Favor informar números inteiros")
         }
         const horas = tempo_em_segundos / 3600
@@ -50,158 +50,60 @@ class ServicoExercicio {
     
         return resultado
     }
-} 
-
-
-// function quilometrosmetros(quilometros) {
-
-//     const metro = quilometros / 100
-//     const centimetro = quilometros % 100
-//     const medida = `${parseInt(metro)},${parseInt(centimetro)}`
-
-//     return medida
-// }
-// function tabuada1a10(num1) {
-//     let resultado = ''
-//     for (let i = 1; i <= 10; i++) {
-//         const multiplicacao = num1 * i
-//         resultado += `${num1} x ${i} = ${multiplicacao}, `
-//     }
+    Quilometrosmetros(quilometros){
+        if(isNaN(quilometros)){
+            throw new Error("Favor informar números inteiros")
+        }
+        const metro = quilometros / 100
+        const centimetro = quilometros % 100
+        const resultado = `${parseInt(metro)},${parseInt(centimetro)}`
     
-//     return  resultado 
-// }
-// function aprovado(num1, num2, num3) {
-//     let resultado = (num1 + num2 + num3)/3
-//     if(resultado>=7)
-//     {
-//         resultado= 'aprovado'
-//     }else
-//     {
-//         resultado= 'reprovado'
-//     }
-//     return  resultado 
-// }
-// function imc(sexo, altura) {
-//     let resultado = altura
-//     if(sexo == 'homem'||'Homem'||'h'||'H'||'macho'||'Macho')
-//     {
-//         resultado = (72.7 * altura) - 58
-//     }else if(sexo = 'Mulher'||'mulher'||'f'||'F'||'femea'||'Femea'||'fêmea'||'Fêmea')
-//     {
-//         resultado = (62.1*altura)-44.7
-//     }
-//     resultado = resultado.toFixed(2);
-//     return  resultado 
-// }
-// function operacao(operacao,num1, num2) {
-//     let resultado
-//     if(operacao == 1){
-// 		resultado =(num1 + num2)
-//     }else if (operacao == 2){
-// 		resultado =(num1 - num2);
-//     }else if (operacao == 3){
-// 		resultado =(num1 * num2);
-//     }else{
-//         resultado =(num1 / num2)
-//     }
-//         return resultado
-// }
-// function posiounega(num1) {
-//     let resultado
-//     if(num1 > 0){
-// 		resultado ='positivo'
-//     }else if (num1 < 0){
-// 		resultado ='negativo'
-//     }else{
-//         resultado ='é igual a 0'
-//     }
-//         return resultado
-// }
-// function parouimpar(num1) {
-//     let resultado
-//     if(num1 == 0){
-// 		resultado ='neutro'
-//     }else if(num1 % 2 == 0){
-// 		resultado ='par'
-//     }else{
-//         resultado ='impar'
-//     }
-//         return resultado
-// }
-// function maiorque(num1,num2) {
-//     let resultado
-//     if(num1 > num2){
-// 		resultado =`${num1} maior que o ${num2}`
-//     }else if(num1 < num2){
-// 		resultado =`${num2} maior que o ${num1}`
-//     }else{
-//         resultado =`${num1} igual a ${num2}`
-//     }
-//         return resultado
-// }
-// function triangulo(a, b, c, base, altura) {
-//     let resultado
-//     if (a <= 0 || b <= 0 || c <= 0) {
-//         return resultado = `Medidas inválidas. Todos os lados devem ser positivos verifique os valores a=${a} b=${b} c=${c}`
-//     }
-
-//     if (a + b > c && a + c > b && b + c > a) {
-//         resultado = 'Triângulo válido. A área é '
-//         resultado += (base * altura / 2)
-//     } else {
-//         resultado = `Triângulo inválido verifique os valores a=${a} b=${b} c=${c}`
-//     }
-//     return resultado
-// }
-// function impostoderenda(cpf,dependentes,salario) {
-//     const salamini = 1500
-//     if(salario <= 2 * salamini){
-
-// 		resultado =`${0}% cpf ${cpf}`
-        
-//     }else if(salamini * 2 < salario <= 3 * salamini){
-
-// 		resultado =`${5 - dependentes * 5}% cpf ${cpf}`
-
-//     }else if(salamini * 3 < salario <= 5 * salamini){
-
-// 		resultado =`${10 - dependentes * 5}% cpf ${cpf}`
-
-//     }else if(salamini * 5 < salario <= 7 * salamini){
-
-// 		resultado =`${15 - dependentes * 5}% cpf ${cpf}`
-
-//     }else{
-
-//         resultado =`${20 - dependentes * 5}% cpf ${cpf}`
-
-//     }
-//     return resultado
-// }
-// function mediaponderada(num1, num2, num3) {
-//     let media = (num1 * 2 + num2 * 3 + num3 * 5)/10
-//     media = media.toFixed(1);
-//     let resultado
-//     if(media>=7)
-//     {
-//         resultado = `aprovado com média ${media}`
-//     }else
-//     {
-//         resultado = `reprovado com média ${media}`
-//     }
-//     return  resultado 
-// }
-// function valorcarro(valordefabriva) {
-//     let resultado = valordefabriva + (valordefabriva * (28 + 45)/100)
-//     resultado = resultado.toFixed(1);
-//     return  resultado 
-// }
-// function juros(dias, taxa, capital) {
-//     let resultado = capital * (taxa/100 + 1) * dias
-//     resultado = resultado.toFixed(1);
-//     return  resultado 
-// }
-// module.exports =  celsiofahrenheit, quilometrosmilha, segundoprelogio, 
-//     tabuada1a10, quilometrosmetros,aprovado, imc, operacao, posiounega, 
-//     parouimpar, maiorque, triangulo, impostoderenda, mediaponderada, valorcarro, juros}
+        return resultado
+    }
+    Tabuada1a10(num1) {
+        if(isNaN(num1)){
+            throw new Error("Favor informar números inteiros")
+        }
+        let resultado = ''
+        for (let i = 1; i <= 10; i++) {
+            const multiplicacao = num1 * i
+            resultado += `${num1} x ${i} = ${multiplicacao}, ` 
+        }
+        return  resultado
+    }
+    Aprovado(num1, num2, num3) {
+        if(isNaN(num1 || num2 || num3)){
+            throw new Error("Favor informar números inteiros")
+        }
+        let resultado = (num1 + num2 + num3)/3
+        if(resultado>=7)
+        {
+            resultado= 'aprovado'
+        }else
+        {
+            resultado= 'reprovado'
+        }
+        return  resultado 
+    }
+    Imc(sexo, altura) {
+        if(isNaN(altura)){
+            throw new Error("Favor informar números inteiros")
+        }else if(typeof sexo != 'string'){
+            throw new Error("Favor informar sexo como letra")
+        }
+        let resultado = 0
+        if(sexo.toLowerCase() == 'homem' || sexo.toLowerCase() == 'h' || sexo.toLowerCase() == 'macho' || sexo.toLowerCase() == 'm')
+        {
+            resultado = (72.7 * altura) - 58
+        }else if(sexo.toLowerCase() == 'mulher' || sexo.toLowerCase() == 'f' || sexo.toLowerCase() == 'femea' || sexo.toLowerCase() == 'fêmea')
+        {
+            resultado = (62.1*altura)-44.7
+        }else{
+            throw new Error("Favor informar sexo válido")
+        }
+        resultado = resultado.toFixed(2);
+        return  resultado 
+    }
+} 
+    
 module.exports = ServicoExercicio
