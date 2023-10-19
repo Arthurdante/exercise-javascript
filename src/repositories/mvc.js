@@ -5,6 +5,12 @@ class Repositoriomvc {
     PegarUm(index) {
         return nomes[index]
     }
+    
+    async PegarUmPorEmail(email) {
+        return Pessoa.findOne({
+            where: { email }
+        });
+    }
 
     PegarTodos() {
         return nomes
@@ -18,6 +24,9 @@ class Repositoriomvc {
     }
     Deletar(index) {
         return nomes.splice(index, 1)
+    }
+    Login(){
+
     }
 }
 module.exports = Repositoriomvc

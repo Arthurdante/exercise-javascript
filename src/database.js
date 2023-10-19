@@ -1,7 +1,7 @@
 const {Sequelize} = require('sequelize')
-const {Develoment} = require('./config')
+const { development } = require('./config')
 
-const sequelize = new Sequelize(Develoment)
+const sequelize = new Sequelize(development)
 sequelize.sync()
     .then(() => (
         console.log("conectou ao banco de dados")

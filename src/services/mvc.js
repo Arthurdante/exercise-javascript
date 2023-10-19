@@ -7,6 +7,9 @@ class servicomvc {
     PegarUm(index) {
         return repositorio.PegarUm(index)
     }
+    async PegarUmPorEmail(email) {
+        return repositorio.PegarUmPorEmail(email);
+    }
 
     PegarTodos() {
         return repositorio.PegarTodos()
@@ -28,6 +31,9 @@ class servicomvc {
     }
     Deletar(index) {
         return repositorio.Deletar(index)
+    }
+    Login(){
+        
     }
 }
 module.exports = servicomvc

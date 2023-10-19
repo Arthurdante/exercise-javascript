@@ -1,0 +1,8 @@
+# Arquivos gerados automaticamente
+node_modules/
+build/
+
+# Arquivos sensíveis
+.env
+.env.local
+.env.development
